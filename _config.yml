@@ -1,3 +1,4 @@
 theme: jekyll-theme-tactile
 title: Andrew Dummer!!!
 description: Projects
+permalink: /blog/:year/:month/:day/:title
