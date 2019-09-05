@@ -111,7 +111,7 @@
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
-          'maxResults': 10,
+          'maxResults': 100,
           'orderBy': 'startTime'
         }).then(function(response) {
           var events = response.result.items;
@@ -124,7 +124,9 @@
               if (!when) {
                 when = event.start.date;
               }
-              appendPre(event.summary + ' (' + when + ')')
+              if(event.summary.startsWith("Gig"){
+                appendPre(event.summary + ' (' + when + ')')
+              }
             }
           } else {
             appendPre('No upcoming events found.');
